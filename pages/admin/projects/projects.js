@@ -14,7 +14,10 @@ const AdminProjectsPage = () => {
         for (let btn of btns) {
             const id = btn.dataset.id;
             btn.addEventListener("click", function () {
-                deleteProject(id)
+                deleteProject(id).then(() => {
+                    const newData = data.filter((project) => project.id != id);
+                    setData(newData); // set lại data
+                });
             });
         }
     });
