@@ -12,21 +12,7 @@
       "feedback": {},
       "technology": "",
       "team": "",
-      "category": ""
-    },
-    {
-      "id": "2",
-      "name": "projects 1",
-      "conten": "",
-      "feartedImage": "",
-      "Album": [],
-      "linkGithub": "",
-      "linkPreview": "",
-      "date": "",
-      "feedback": {},
-      "technology": "",
-      "team": "",
-      "category": ""
+      "categoryid": "1"
     }
   ],
   "categoryProjects": [
@@ -56,20 +42,6 @@
       }
     ]
   },
-  "categoryPost": [
-    {
-      "id": "1",
-      "name": "Category A"
-    },
-    {
-      "id": "2",
-      "name": "Category B"
-    },
-    {
-      "id": "3",
-      "name": "Category B"
-    }
-  ],
   "menu": [
     {
       "id": "1",
@@ -78,6 +50,14 @@
     {
       "id": "2",
       "name": "projects"
+    }
+  ],
+  "personalinformation": [
+    {
+      "name": "Nguyễn Văn Hải",
+      "date": "20/11/2003",
+      "conten": "Mình là sinh viên kỳ 5 của trường cao đẳng FPT Polytechnic",
+      "Sở thích": "Nghe nhạc, chơi game, đi phượt"
     }
   ],
   "config": [

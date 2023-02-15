@@ -2,12 +2,24 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/components/*.{js,ts,jsx,tsx}",
-    "./src/pages/*.{js,ts,jsx,tsx}",
-    "./src/pages/admin/*.{js,ts,jsx,tsx}",
+    "./src/components/*.{html,js,ts,jsx,tsx}",
+    "./src/pages/*.{html,js,ts,jsx,tsx}",
+    "./src/pages/admin/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        '200': '336px',
+        '810': '810px',
+        '506': "506px"
+      },
+      height: {
+        '540': '540px'
+      },
+      colors: {
+        "primary": "#2B2B2B"
+      }
+    },
   },
   plugins: [],
 }

@@ -5,6 +5,7 @@ import { render, router } from "./lib";
 import AdminEditProjectsPage from "./pages/admin/projects/projects";
 import AdminProjectsPage from "./pages/admin/projects/projects";
 import AdminAddProjectsPage from "./pages/admin/projects/projects-add";
+import HomePage from "./pages/home";
 
 
 // alt + shift + o
@@ -26,5 +27,5 @@ router.on("/admin/projects/:id/edit", ({ data }) => render(() => AdminEditProjec
 router.notFound(() => render(NotFoundPage, app));
 //npm i navigo --save
 router.resolve();
-sd
+
 // render(HomePage, app);

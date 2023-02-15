@@ -1,4 +1,4 @@
-import HeaderAdmin from "../../../components/HeaderAdmin"
+import HeaderAdmin from "./../../../components/HeaderAdmin"
 import { deleteProject, getProjects } from "../../../api/project";
 import { useEffect, useState } from "../../../lib";
 
@@ -26,6 +26,7 @@ const AdminProjectsPage = () => {
         ${HeaderAdmin()}
     <div class="container"> 
                 <h1>Quản lý dự án</h1>
+                <button><a ></a></button>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
