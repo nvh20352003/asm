@@ -52,6 +52,27 @@
         "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676545663/CV/zrab1rgy4ntxgyddav0t.jpg"
       ],
       "categoryid": "3"
+    },
+    {
+      "id": "iZZi11l",
+      "name": "ádfg",
+      "describe": "sdfds",
+      "content": "sdfsdff",
+      "linkGithub": "sdfgsd",
+      "linkPreview": "dfsfg",
+      "completiontime": "sdfgsdf",
+      "feedback": "sdfg",
+      "technology": "sdfg",
+      "feartedImage": [
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676561443/CV/xpuvj4sfwnexaunaypjw.jpg"
+      ],
+      "Album": [
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676561444/CV/kqzt0chunxsseqpir3mv.jpg",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676561447/CV/snjp8qfyqr6aozd2ciec.jpg",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676561451/CV/yyym9ubjnh2viohb0bym.jpg",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676561455/CV/oxpibtoixy4dkpmrxmsv.jpg"
+      ],
+      "categoryid": "3"
     }
   ],
   "categoryProjects": [
@@ -131,7 +152,6 @@
     "phone": "0971397545",
     "email": "nguyenhai20112003@gmail.com",
     "facebook": "https://www.facebook.com/20112003HERO",
-    "integram": "https://www.instagram.com/nguyenhai20112003/",
-    "telegram": ""
+    "integram": "https://www.instagram.com/nguyenhai20112003/"
   }
 }
