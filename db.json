@@ -3,6 +3,37 @@
     {
       "id": "1",
       "name": "projects 1",
+      "describe": "adsfdadsdafsdfasdffasfaf",
+      "conten": "",
+      "feartedImage": "",
+      "Album": [],
+      "linkGithub": "",
+      "linkPreview": "",
+      "date": "",
+      "feedback": {},
+      "technology": "",
+      "team": "",
+      "categoryid": "1"
+    },
+    {
+      "id": "2",
+      "name": "projects 2",
+      "describe": "adsfdadsdafsdfasdffasfaf",
+      "conten": "",
+      "feartedImage": "",
+      "Album": [],
+      "linkGithub": "",
+      "linkPreview": "",
+      "date": "",
+      "feedback": {},
+      "technology": "",
+      "team": "",
+      "categoryid": "1"
+    },
+    {
+      "id": "3",
+      "name": "projects 3",
+      "describe": "adsfdadsdafsdfasdffasfaf",
       "conten": "",
       "feartedImage": "",
       "Album": [],
@@ -39,6 +70,15 @@
         "author": "",
         "except": "",
         "Category": ""
+      },
+      {
+        "title": "",
+        "conten": "",
+        "fearted-Image": "",
+        "createAt": "",
+        "author": "",
+        "except": "",
+        "Category": ""
       }
     ]
   },
@@ -52,15 +92,38 @@
       "name": "projects"
     }
   ],
-  "personalinformation": [
-    {
-      "name": "Nguyễn Văn Hải",
-      "date": "20/11/2003",
-      "conten": "Mình là sinh viên kỳ 5 của trường cao đẳng FPT Polytechnic",
-      "Sở thích": "Nghe nhạc, chơi game, đi phượt"
-    }
-  ],
+  "abuotMe": {
+    "name": "Nguyễn Văn Hải",
+    "date": "20/11/2003",
+    "job": "Front end developer",
+    "describe": "I'm a computer techniclan with a focus on web development with HTML, CSS and JavaScript",
+    "img": "",
+    "imgskills": "./../../public/img/image5.png",
+    "conten": "My name is Nguyen Van Hai, I'm a computer technician with a great passion for programming. Improved my skills as a Front-End developerI develop websites and applications using HTML, CSS, and JavaScript.I'm always improving myself with each project I get my hands on. I am a dedicated person who pursues his dreams, hardworking and results oriented, I always seek to achieve my best version.",
+    "interest": "Nghe nhạc, chơi game, đi phượt",
+    "skills": [
+      {
+        "name": "HTML",
+        "imgskill": "./../../public/img/1.png"
+      },
+      {
+        "name": "CSS",
+        "imgskill": "./../../public/img/3.png"
+      },
+      {
+        "name": "JS",
+        "imgskill": "./../../public/img/4.png"
+      }
+    ]
+  },
   "config": [
     {}
-  ]
+  ],
+  "contact": {
+    "phone": "0971397545",
+    "email": "nguyenhai20112003@gmail.com",
+    "facebook": "https://www.facebook.com/20112003HERO",
+    "integram": "https://www.instagram.com/nguyenhai20112003/",
+    "telegram": ""
+  }
 }
