@@ -9,10 +9,9 @@
       "Album": [],
       "linkGithub": "",
       "linkPreview": "",
-      "date": "",
+      "completiontime": "",
       "feedback": {},
       "technology": "",
-      "team": "",
       "categoryid": "1"
     },
     {
@@ -24,25 +23,9 @@
       "Album": [],
       "linkGithub": "",
       "linkPreview": "",
-      "date": "",
+      "completiontime": "",
       "feedback": {},
       "technology": "",
-      "team": "",
-      "categoryid": "1"
-    },
-    {
-      "id": "3",
-      "name": "projects 3",
-      "describe": "adsfdadsdafsdfasdffasfaf",
-      "conten": "",
-      "feartedImage": "",
-      "Album": [],
-      "linkGithub": "",
-      "linkPreview": "",
-      "date": "",
-      "feedback": {},
-      "technology": "",
-      "team": "",
       "categoryid": "1"
     }
   ],

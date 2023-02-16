@@ -6,6 +6,7 @@ import ProjectList from "./../components/ProjectList";
 
 const HomePage = () => {
     return `
+    <div class= "bg-black">
     <header class="bg-black">
     ${Header()}
     </header>
@@ -14,13 +15,13 @@ const HomePage = () => {
     <h1 class="text-white my-16 text-center text-4xl">My portfolio</h1>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-14">
         ${ProjectList()}
-        
     </div>
     ${ContacMe()}
 </div>
     <footer>
     ${Footer()}
     </footer>
+    </div>
     `;
 
 };

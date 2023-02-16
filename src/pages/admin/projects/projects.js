@@ -26,16 +26,16 @@ const AdminProjectsPage = () => {
         ${HeaderAdmin()}
     <div class="container"> 
                 <h1>Quản lý dự án</h1>
-                <button><a ></a></button>
+                <button><a></a></button>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th>#</th>
                             <th>Tên dự án</th>
                             <th>Hình ảnh</th>
-                            <th>conten</th>
+                            <th>describe</th>
                             <th>Technology</th>
-                            <th>team</th>
+                            <th>Completiontime</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -47,9 +47,9 @@ const AdminProjectsPage = () => {
                                     <td>${index + 1}</td>
                                     <td>${project.name}</td>
                                     <td>${project.feartedImage}</td>
-                                    <td>${project.conten}</td>
+                                    <td>${project.describe}</td>
                                     <td>${project.technology}</td>
-                                    <td>${project.teams}</td>
+                                    <td>${project.completiontime}</td>
                                     <td width="150">
                                         <button data-id="${project.id
                     }" class="btn btn-danger btn-remove">
