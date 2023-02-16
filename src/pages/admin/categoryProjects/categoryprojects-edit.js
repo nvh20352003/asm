@@ -1,6 +1,6 @@
-import HeaderAdmin from "./../../../components/HeaderAdmin";
-import { getProject, updateProject } from "./../../../api/project";
-import { router, useEffect, useState } from "./../../../lib";
+import HeaderAdmin from "../../../components/HeaderAdmin";
+import { getProject, updateProject } from "../../../api/project";
+import { router, useEffect, useState } from "../../../lib";
 import { getCateProjects } from "../../../api/categoryProjects";
 import uploadFiles from "../../../components/UploadImg";
 

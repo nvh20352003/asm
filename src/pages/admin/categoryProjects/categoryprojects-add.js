@@ -1,25 +1,15 @@
-import HeaderAdmin from "./../../../components/HeaderAdmin";
-import { getProject, updateProject } from "./../../../api/project";
-import { router, useEffect, useState } from "./../../../lib";
+import { addProject } from "../../../api/project";
+import HeaderAdmin from "../../../components/HeaderAdmin";
 import { getCateProjects } from "../../../api/categoryProjects";
+import { router, useEffect, useState } from "../../../lib";
 import uploadFiles from "../../../components/UploadImg";
 
-const AdminEditProjectsPage = ({ id }) => {
+const AdminAddProjectsPage = () => {
     const [cate, setcate] = useState([]);
     useEffect(() => {
-        getProject(id).then((data) => setData(data));
-    }, []);
-    // kiểm tra localStorage có dữ liệu không?
-    // nếu có thì lấy dữ liệu
-    // ngược lại thì gán mảng rỗng
-    const [data, setData] = useState({});
-
-    useEffect(() => {
-        getCateProjects(id).then((cate) => setcate(cate));
+        getCateProjects().then((cate) => setcate(cate));
     }, []);
 
-    // const projects = JSON.parse(localStorage.getItem("projects")) || [];
-    // const currentProject = projects.find((project) => project.id == id);
     useEffect(() => {
         const form = document.getElementById("form-add");
         const projectName = document.getElementById("project-name");
@@ -33,20 +23,12 @@ const AdminEditProjectsPage = ({ id }) => {
         const projectCategoryid = document.getElementById("project-categoryid");
         const projectAlbum = document.getElementById("project-album");
         const projectImg = document.getElementById("project-img");
-
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-            let urls = data.feartedImage;
-            let urls1 = data.Album;
+            const urls = await uploadFiles(projectImg.files);
+            const urls1 = await uploadFiles(projectAlbum.files);
             // tạo ra 1 object mới lấy dữ liệu từ form
-            if (projectAlbum.files) {
-                let urls1 = await uploadFiles(projectAlbum.files);
-            }
-            if (projectImg.files) {
-                let urls = await uploadFiles(projectImg.files);
-            }
-            const formData = {
-                id,
+            const formData2 = {
                 name: projectName.value,
                 describe: projectDescribe.value,
                 content: projectContent.value,
@@ -59,9 +41,11 @@ const AdminEditProjectsPage = ({ id }) => {
                 Album: urls1,
                 categoryid: projectCategoryid.value
             };
-            updateProject(formData).then(() => router.navigate("/admin/projects"));
+            // call api va tham phan tu
+            addProject(formData2).then(() => router.navigate("/admin/projects"));
         });
     });
+
     return `
     ${HeaderAdmin()}
             <div class="container">
@@ -69,19 +53,18 @@ const AdminEditProjectsPage = ({ id }) => {
             <form action="" id="form-add">
                 <div class="form-group mb-3">
                     <label for="" class="form-label">Tên dự án</label>
-                    <input type="text" class="form-control" id="project-name" value="${data.name}"/>
+                    <input type="text" class="form-control" id="project-name" />
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label">Mô Tả</label>
-                    <input type="text" class="form-control" value="${data.describe}" id="project-describe"/>
+                    <input type="text" class="form-control" id="project-describe"/>
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label">Content</label>
-                    <input type="text" class="form-control" id="project-content" value="${data.content}"/>
+                    <input type="text" class="form-control" id="project-content"/>
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>fearted-Image</label>
-                    <img class="w-16" src="${data.feartedImage}">
                     <input type="file" class="form-control"  id="project-img"/>
                 </div>
                 <div class="form-group mb-3">
@@ -90,44 +73,40 @@ const AdminEditProjectsPage = ({ id }) => {
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>Link Github</label>
-                    <input type="text" class="form-control" value="${data.linkGithub}" id="project-linkGithub"/>
+                    <input type="text" class="form-control" id="project-linkGithub"/>
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>Link Preview</label>
-                    <input type="text" class="form-control" value="${data.linkPreview}" id="project-linkPreview"/>
+                    <input type="text" class="form-control" id="project-linkPreview"/>
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>Completion time</label>
-                    <input type="text" class="form-control" value="${data.completiontime}" id="project-completiontime"/>
+                    <input type="text" class="form-control" id="project-completiontime"/>
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>Feedback</label>
-                    <input type="text" class="form-control" value="${data.feedback}" id="project-feedback"/>
+                    <input type="text" class="form-control" id="project-feedback"/>
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>Technology</label>
-                    <input type="text" class="form-control" value="${data.technology}" id="project-technology"/>
+                    <input type="text" class="form-control" id="project-technology"/>
                 </div>
                 
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>Danh mục dự án</label>
                     <select name="" id="project-categoryid">
                     ${cate.map((categoryProjects) => {
-        let s = "";
-        if (categoryProjects.id == data.categoryid) {
-            s = "selected";
-        }
-        return `<option value="${categoryProjects.id}" ${s}>${categoryProjects.name}</option>`;
+        return `<option value="${categoryProjects.id}">${categoryProjects.name}</option>`;
     }).join("")}
-<option value=""></option>
-                    </select >
-                </div >
-    <div class="form-group">
-        <button class="btn btn-primary">Lưu</button>
-    </div>
-            </form >
-        </div >
+                    <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary">Thêm dự án</button>
+                </div>
+            </form>
+        </div>
     `;
 };
 
-export default AdminEditProjectsPage;
+export default AdminAddProjectsPage;

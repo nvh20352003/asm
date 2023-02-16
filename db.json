@@ -5,7 +5,7 @@
       "name": "projects 1",
       "describe": "adsfdadsdafsdfasdffasfaf",
       "conten": "",
-      "feartedImage": "",
+      "feartedImage": [],
       "Album": [],
       "linkGithub": "",
       "linkPreview": "",
@@ -15,18 +15,43 @@
       "categoryid": "1"
     },
     {
-      "id": "2",
-      "name": "projects 2",
-      "describe": "adsfdadsdafsdfasdffasfaf",
-      "content": "",
-      "feartedImage": "",
-      "Album": [],
-      "linkGithub": "",
-      "linkPreview": "",
-      "completiontime": "",
-      "feedback": {},
-      "technology": "",
-      "categoryid": "1"
+      "name": "ads",
+      "describe": "dfd",
+      "content": "fdf",
+      "linkGithub": "dfds",
+      "linkPreview": "sdf",
+      "completiontime": "dfs",
+      "feedback": "dfs",
+      "technology": "dfs",
+      "Album": [
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676544821/CV/kla598srqh0fd150cete.jpg",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676544825/CV/w8gpkdpddigsnjtreolz.jpg",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676544828/CV/zs6xwx1akq9lzq5vrorx.jpg",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676544839/CV/jf4im2nm5jekvawu8pys.jpg"
+      ],
+      "categoryid": "2",
+      "id": "G3UlJKw"
+    },
+    {
+      "id": "7X37nLm",
+      "name": "add 1",
+      "describe": "dfd",
+      "content": "fsdfds",
+      "linkGithub": "dfds",
+      "linkPreview": "sdf",
+      "completiontime": "ấdasdsd",
+      "feedback": "dfs",
+      "technology": "asdasd",
+      "feartedImage": [
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676552510/CV/btjygo4vuvqjmvtkipop.jpg"
+      ],
+      "Album": [
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676545653/CV/qfpehwblzyar6vvv43ts.jpg",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676545656/CV/qhkjrr7ls1rhor5d23p6.jpg",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676545659/CV/dru1delnooepmacovrxb.jpg",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676545663/CV/zrab1rgy4ntxgyddav0t.jpg"
+      ],
+      "categoryid": "3"
     }
   ],
   "categoryProjects": [

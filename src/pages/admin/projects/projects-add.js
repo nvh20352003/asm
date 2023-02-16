@@ -2,7 +2,7 @@ import { addProject } from "./../../../api/project";
 import HeaderAdmin from "./../../../components/HeaderAdmin";
 import { getCateProjects } from "./../../../api/categoryProjects";
 import { router, useEffect, useState } from "../../../lib";
-import axios from "axios";
+import uploadFiles from "./../../../components/UploadImg";
 
 const AdminAddProjectsPage = () => {
     const [cate, setcate] = useState([]);
@@ -22,9 +22,11 @@ const AdminAddProjectsPage = () => {
         const projectTechnology = document.getElementById("project-technology");
         const projectCategoryid = document.getElementById("project-categoryid");
         const projectAlbum = document.getElementById("project-album");
+        const projectImg = document.getElementById("project-img");
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-            const urls = await uploadFiles(projectAlbum.files);
+            const urls = await uploadFiles(projectImg.files);
+            const urls1 = await uploadFiles(projectAlbum.files);
             // tạo ra 1 object mới lấy dữ liệu từ form
             const formData2 = {
                 name: projectName.value,
@@ -35,38 +37,15 @@ const AdminAddProjectsPage = () => {
                 completiontime: projectCompletiontime.value,
                 feedback: projectFeedback.value,
                 technology: projectTechnology.value,
-                Album: urls,
+                feartedImage: urls,
+                Album: urls1,
                 categoryid: projectCategoryid.value
             };
             // call api va tham phan tu
             addProject(formData2).then(() => router.navigate("/admin/projects"));
         });
     });
-    const uploadFiles = async (files) => {
-        if (files) {
-            const CLOUD_NAME = "dqqfnp0hk";
-            const PRESET_NAME = "upload-cv";
-            const FOLDER_NAME = "CV";
-            const urls = [];
-            const api = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
 
-            const formData = new FormData();
-            formData.append("upload_preset", PRESET_NAME);
-            formData.append("folder", FOLDER_NAME);
-
-            for (const file of files) {
-                formData.append("file", file);
-
-                const response = await axios.post(api, formData, {
-                    headers: {
-                        "Content-Type": "multipart/form-data",
-                    },
-                });
-                urls.push(response.data.secure_url);
-            }
-            return urls;
-        }
-    };
     return `
     ${HeaderAdmin()}
             <div class="container">
@@ -86,11 +65,11 @@ const AdminAddProjectsPage = () => {
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>fearted-Image</label>
-                    <input type="file" class="form-control" multiple id="project-img"/>
+                    <input type="file" class="form-control"  id="project-img"/>
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>Album</label>
-                    <input type="file" class="form-control" id="project-album"/>
+                    <input type="file" class="form-control" multiple id="project-album"/>
                 </div>
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>Link Github</label>
