@@ -26,7 +26,7 @@ const AdminProjectsPage = () => {
         ${HeaderAdmin()}
     <div class="container"> 
                 <h1>Quản lý dự án</h1>
-                <button><a></a></button>
+                <button class= "btn btn-danger mb-3"><a class="no-underline text-white" href="/admin/projects/add">Thêm mới</a></button>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
