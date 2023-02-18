@@ -1,15 +1,7 @@
-import { getProjects } from "./../api/project";
-import { useEffect, useState } from "./../lib";
-const ProjectList = () => {
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        getProjects().then((data) => setData(data));
-    }, []);
+const ProjectList = ({ projects }) => {
     return `
-    ${data
-            .map((project) => {
-                return `
+    ${projects.map((project) => {
+        return `
             <div class="text-white border border-[$] rounded-lg block bg-[#2B2B2B] flex flex-col px-4">
             <div class="flex justify-between pt-4">
                 <div>
@@ -18,7 +10,7 @@ const ProjectList = () => {
                 <div>
                     <img src="../img/111232.png" alt="">
                 </div>
-        
+
             </div>
             <div class=" w-full h-full pt-10">
                 <div>${project.name}</div>

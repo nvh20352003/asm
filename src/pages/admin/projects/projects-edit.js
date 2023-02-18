@@ -36,30 +36,30 @@ const AdminEditProjectsPage = ({ id }) => {
 
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-            let urls = data.feartedImage;
-            let urls1 = data.Album;
-            // tạo ra 1 object mới lấy dữ liệu từ form
+            const urls = data.feartedImage;
+            const urls1 = data.Album;
             if (projectAlbum.files) {
-                let urls1 = await uploadFiles(projectAlbum.files);
-            }
-            if (projectImg.files) {
-                let urls = await uploadFiles(projectImg.files);
-            }
-            const formData = {
-                id,
-                name: projectName.value,
-                describe: projectDescribe.value,
-                content: projectContent.value,
-                linkGithub: projectLinkGithub.value,
-                linkPreview: projectLinkPreview.value,
-                completiontime: projectCompletiontime.value,
-                feedback: projectFeedback.value,
-                technology: projectTechnology.value,
-                feartedImage: urls,
-                Album: urls1,
-                categoryid: projectCategoryid.value
+                console.files
+                // urls1 = await uploadFiles(projectAlbum.files);
             };
-            updateProject(formData).then(() => router.navigate("/admin/projects"));
+            if (projectImg.files) {
+                urls = await uploadFiles(projectImg.files);
+            };
+            // const formData = {
+            //     id,
+            //     name: projectName.value,
+            //     describe: projectDescribe.value,
+            //     content: projectContent.value,
+            //     linkGithub: projectLinkGithub.value,
+            //     linkPreview: projectLinkPreview.value,
+            //     completiontime: projectCompletiontime.value,
+            //     feedback: projectFeedback.value,
+            //     technology: projectTechnology.value,
+            //     feartedImage: urls,
+            //     Album: urls1,
+            //     categoryid: projectCategoryid.value
+            // };
+            // updateProject(formData).then(() => router.navigate("/admin/projects"));
         });
     });
     return `
@@ -78,7 +78,7 @@ const AdminEditProjectsPage = ({ id }) => {
                 <div class="form-group mb-3">
                     <label for="" class="form-label">Content</label>
                     <input type="text" class="form-control" id="project-content" value="${data.content}"/>
-                </div>
+                </div>  
                 <div class="form-group mb-3">
                     <label for="" class="form-label"></label>fearted-Image</label>
                     <img class="w-16" src="${data.feartedImage}">

@@ -37,7 +37,7 @@ const Aboutme = () => {
                 </div>
                 <div class="flex justify-center md:justify-start">
                     <img class="w-200 h-56 md:w-810 md:h-540"
-                        src="../img/180274506_637381227204981_7076703519571390408_n.jpg" alt="">
+                        src="${aboutMe.img}" alt="">
                 </div>
         
             </div>
