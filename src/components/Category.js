@@ -12,7 +12,7 @@ const Category = ({ categories, onClick }) => {
     });
     return `
     ${categories.map((cate) => `
-    <button class="btn " data-id="${cate.id}">${cate.name}</button>
+    <button class="btn text-white hover:text-red-400" data-id="${cate.id}"><p class = "text-white">${cate.name}</p></button>
 `
     )
             .join("")}

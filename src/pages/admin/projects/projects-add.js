@@ -40,7 +40,7 @@ const AdminAddProjectsPage = () => {
                 technology: projectTechnology.value,
                 feartedImage: urls,
                 Album: urls1,
-                categoryid: projectCategoryid.value
+                categoryProjectId: projectCategoryid.value
             };
             // call api va tham phan tu
             addProject(formData2).then(() => router.navigate("/admin/projects"));

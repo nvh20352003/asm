@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { render, router } from "./lib";
+import AdminAboutPage from "./pages/admin/abuotMe/aboutMe";
+import AdminAboutMeEditPage from "./pages/admin/abuotMe/aboutMe-edit";
 
 import AdminCategoryProjectsPage from "./pages/admin/categoryprojects/categoryprojects";
 import AdminAddCategoryProjectsPage from "./pages/admin/categoryprojects/categoryprojects-add";
@@ -9,6 +11,7 @@ import AdminProjectsPage from "./pages/admin/projects/projects";
 import AdminAddProjectsPage from "./pages/admin/projects/projects-add";
 import AdminEditProjectsPage from "./pages/admin/projects/projects-edit";
 import HomePage from "./pages/home";
+import RegisterPage from "./pages/register";
 
 
 // alt + shift + o
@@ -16,6 +19,7 @@ import HomePage from "./pages/home";
 const app = document.querySelector("#app");
 
 router.on("/", () => render(HomePage, app));
+router.on("/register", () => render(RegisterPage, app));
 
 router.on("/admin/projects", () => render(AdminProjectsPage, app));
 router.on("/admin/projects/add", () => render(AdminAddProjectsPage, app));
@@ -26,8 +30,8 @@ router.on("/admin/categoryprojects/add", () => render(AdminAddCategoryProjectsPa
 router.on("/admin/categoryprojects/:id/edit", ({ data }) => render(() => AdminEditCategoryProjectsPage(data), app));
 router.notFound(() => render(NotFoundPage, app));
 
-router.on("/admin/aboutMe", () => render(AdminProjectsPage, app));
-router.on("/admin/aboutMe/:id/edit", ({ data }) => render(() => AdminEditProjectsPage(data), app));
+router.on("/admin/aboutMe", () => render(AdminAboutPage, app));
+router.on("/admin/aboutMe/:id/edit", ({ data }) => render(() => AdminAboutMeEditPage(data), app));
 //npm i navigo --save
 router.resolve();
 

@@ -1,20 +1,6 @@
 {
   "projects": [
     {
-      "id": "1",
-      "name": "projects 1",
-      "describe": "adsfdadsdafsdfasdffasfaf",
-      "conten": "",
-      "feartedImage": [],
-      "Album": [],
-      "linkGithub": "",
-      "linkPreview": "",
-      "completiontime": "",
-      "feedback": {},
-      "technology": "",
-      "categoryProjectId": "1"
-    },
-    {
       "name": "ads",
       "describe": "dfd",
       "content": "fdf",
@@ -30,49 +16,44 @@
         "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676544839/CV/jf4im2nm5jekvawu8pys.jpg"
       ],
       "categoryProjectId": "2",
-      "id": "G3UlJKw"
+      "id": "G3UlJKw1"
     },
     {
-      "id": "7X37nLm",
       "name": "add 1",
-      "describe": "dfd",
+      "describe": "àgfg",
       "content": "fsdfds",
-      "linkGithub": "dfds",
-      "linkPreview": "sdf",
+      "linkGithub": "sadas",
+      "linkPreview": "đâsđ",
       "completiontime": "ấdasdsd",
-      "feedback": "dfs",
-      "technology": "asdasd",
+      "feedback": "ádsad",
+      "technology": "dfgfdsgdf",
       "feartedImage": [
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676552510/CV/btjygo4vuvqjmvtkipop.jpg"
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676869533/CV/gi9l31gncyzkgg9zbzmg.png"
       ],
       "Album": [
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676545653/CV/qfpehwblzyar6vvv43ts.jpg",
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676545656/CV/qhkjrr7ls1rhor5d23p6.jpg",
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676545659/CV/dru1delnooepmacovrxb.jpg",
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676545663/CV/zrab1rgy4ntxgyddav0t.jpg"
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676869533/CV/zqom4sxajm8kafmsl5g7.png",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676869534/CV/ra6okdhpjlmwmoghhwrq.png",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676869535/CV/t0tzgcbkjuqwd3szifeu.png",
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676869535/CV/x3yfpwui9sf2ykcjlolz.png"
       ],
-      "categoryProjectId": "3"
+      "categoryProjectId": "3",
+      "id": "XMx3jXL"
     },
     {
-      "id": "iZZi11l",
-      "name": "ádfg",
-      "describe": "sdfds",
-      "content": "sdfsdff",
-      "linkGithub": "sdfgsd",
-      "linkPreview": "dfsfg",
-      "completiontime": "sdfgsdf",
-      "feedback": "sdfg",
-      "technology": "sdfg",
+      "name": "Dự án môn PHP",
+      "describe": "Là một web site bán gấu",
+      "content": "",
+      "linkGithub": "https://github.com/nvh20352003",
+      "linkPreview": "",
+      "completiontime": "1 tháng",
+      "feedback": "",
+      "technology": "Html, css, PHP",
       "feartedImage": [
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676561443/CV/xpuvj4sfwnexaunaypjw.jpg"
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676873635/CV/ywsgllepkrm445hottub.jpg"
       ],
-      "Album": [
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676561444/CV/kqzt0chunxsseqpir3mv.jpg",
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676561447/CV/snjp8qfyqr6aozd2ciec.jpg",
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676561451/CV/yyym9ubjnh2viohb0bym.jpg",
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676561455/CV/oxpibtoixy4dkpmrxmsv.jpg"
-      ],
-      "categoryProjectId": "3"
+      "Album": [],
+      "categoryProjectId": "3",
+      "id": "I8bvr5V"
     }
   ],
   "categoryProjects": [
@@ -122,6 +103,7 @@
     }
   ],
   "abuotMe": {
+    "id": "1",
     "name": "Nguyễn Văn Hải",
     "date": "20/11/2003",
     "job": "Front end developer",
@@ -153,5 +135,17 @@
     "email": "nguyenhai20112003@gmail.com",
     "facebook": "https://www.facebook.com/20112003HERO",
     "integram": "https://www.instagram.com/nguyenhai20112003/"
-  }
+  },
+  "users": [
+    {
+      "email": "nguyenhai20112003@gmail.com",
+      "password": "hai123",
+      "id": 1
+    },
+    {
+      "email": "datlt2306@gmail.com",
+      "password": "$2a$10$UA8QTfN/dFJFXtqBa4BF..e42gG4rre5HeXYnnYVYNaLDwQbPDFP6",
+      "id": 2
+    }
+  ]
 }

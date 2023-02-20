@@ -36,30 +36,34 @@ const AdminEditProjectsPage = ({ id }) => {
 
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-            const urls = data.feartedImage;
-            const urls1 = data.Album;
-            if (projectAlbum.files) {
-                console.files
-                // urls1 = await uploadFiles(projectAlbum.files);
+            let urls1 = [];
+            let urls = [];
+            if (projectAlbum.files.length > 0) {
+                urls1 = await uploadFiles(projectAlbum.files);
+            } else {
+                urls1 = data.Album;
             };
-            if (projectImg.files) {
+
+            if (projectImg.files > 0) {
                 urls = await uploadFiles(projectImg.files);
+            } else {
+                urls = data.feartedImage;
             };
-            // const formData = {
-            //     id,
-            //     name: projectName.value,
-            //     describe: projectDescribe.value,
-            //     content: projectContent.value,
-            //     linkGithub: projectLinkGithub.value,
-            //     linkPreview: projectLinkPreview.value,
-            //     completiontime: projectCompletiontime.value,
-            //     feedback: projectFeedback.value,
-            //     technology: projectTechnology.value,
-            //     feartedImage: urls,
-            //     Album: urls1,
-            //     categoryid: projectCategoryid.value
-            // };
-            // updateProject(formData).then(() => router.navigate("/admin/projects"));
+            const formData = {
+                id,
+                name: projectName.value,
+                describe: projectDescribe.value,
+                content: projectContent.value,
+                linkGithub: projectLinkGithub.value,
+                linkPreview: projectLinkPreview.value,
+                completiontime: projectCompletiontime.value,
+                feedback: projectFeedback.value,
+                technology: projectTechnology.value,
+                feartedImage: urls,
+                Album: urls1,
+                categoryProjectId: projectCategoryid.value
+            };
+            updateProject(formData).then(() => router.navigate("/admin/projects"));
         });
     });
     return `

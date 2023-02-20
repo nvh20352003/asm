@@ -5,7 +5,7 @@ const ProjectList = ({ projects }) => {
             <div class="text-white border border-[$] rounded-lg block bg-[#2B2B2B] flex flex-col px-4">
             <div class="flex justify-between pt-4">
                 <div>
-                    <img src="./../img/122.png" alt="">
+                    <img src="https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676726634/122_xeewab.png" alt="">
                 </div>
                 <div>
                     <img src="../img/111232.png" alt="">

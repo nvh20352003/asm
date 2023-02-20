@@ -3,18 +3,16 @@ import { getProject, updateProject } from "../../../api/project";
 import { router, useEffect, useState } from "../../../lib";
 import { getCateProjects } from "../../../api/categoryProjects";
 import uploadFiles from "../../../components/UploadImg";
+import { getAbuotMe } from "../../../api/abuotMe";
 
-const AdminAboutMeEditPage = ({ id }) => {
-    const [cate, setcate] = useState([]);
-    useEffect(() => {
-        getProject(id).then((data) => setData(data));
-    }, []);
+const AdminAboutMeEditPage = () => {
 
     const [data, setData] = useState({});
 
     useEffect(() => {
-        getCateProjects(id).then((cate) => setcate(cate));
+        getAbuotMe().then((data) => setData(data));
     }, []);
+
 
     useEffect(() => {
         const form = document.getElementById("form-add");
@@ -33,8 +31,6 @@ const AdminAboutMeEditPage = ({ id }) => {
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
             let urls = data.feartedImage;
-            let urls1 = data.Album;
-            // tạo ra 1 object mới lấy dữ liệu từ form
             if (projectAlbum.files) {
                 let urls1 = await uploadFiles(projectAlbum.files);
             }
@@ -42,7 +38,6 @@ const AdminAboutMeEditPage = ({ id }) => {
                 let urls = await uploadFiles(projectImg.files);
             }
             const formData = {
-                id,
                 name: projectName.value,
                 describe: projectDescribe.value,
                 content: projectContent.value,
@@ -104,20 +99,6 @@ const AdminAboutMeEditPage = ({ id }) => {
                     <label for="" class="form-label"></label>Technology</label>
                     <input type="text" class="form-control" value="${data.technology}" id="project-technology"/>
                 </div>
-                
-                <div class="form-group mb-3">
-                    <label for="" class="form-label"></label>Danh mục dự án</label>
-                    <select name="" id="project-categoryid">
-                    ${cate.map((categoryProjects) => {
-        let s = "";
-        if (categoryProjects.id == data.categoryid) {
-            s = "selected";
-        }
-        return `<option value="${categoryProjects.id}" ${s}>${categoryProjects.name}</option>`;
-    }).join("")}
-<option value=""></option>
-                    </select >
-                </div >
     <div class="form-group">
         <button class="btn btn-primary">Lưu</button>
     </div>

@@ -30,7 +30,7 @@ const AdminProjectsPage = () => {
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>STT</th>
                             <th>Tên dự án</th>
                             <th>Hình ảnh</th>
                             <th>describe</th>

@@ -17,18 +17,14 @@ const HomePage = () => {
     }, []);
 
     const onClick = (id) => {
-        fetch(`http://localhost:3000/categoryProjects/${id}?_embed=projects`)
-            .then((response) => response.json())
+        getCateProjectProjects(id)
             .then((data) => setProjects(data.projects));
 
     };
 
     //  
-    return `
-    <div class= "bg-black">
-    <header class="bg-black">
+    return ` 
     ${Header()}
-    </header>
     <div class="container px-12 md:mx-auto">
     ${Aboutme()}
     <h1 class="text-white my-16 text-center text-4xl">My portfolio</h1>
@@ -41,7 +37,7 @@ const HomePage = () => {
     <footer>
     ${Footer()};
     </footer>
-    </div>
+    
     `;
 
 };

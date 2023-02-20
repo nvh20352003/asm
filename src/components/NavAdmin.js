@@ -22,6 +22,20 @@ const NavAdmin = () => {
                 </a>
                 
             </li>
+            <li class="pl-[25px] pt-[30px] inline-block">
+                <a href="/admin/aboutMe" class="text-white no-underline font-semibold">
+                    <i class="fa-solid fa-house"></i>
+                    About
+                </a>
+                
+            </li>
+            <li class="pl-[25px] pt-[30px] inline-block">
+                <a href="/admin/categoryprojects" class="text-white no-underline font-semibold">
+                    <i class="fa-solid fa-house"></i>
+                    Contact
+                </a>
+                
+            </li>
         </ul>`
 };
 export default NavAdmin;

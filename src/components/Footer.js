@@ -29,12 +29,11 @@ const Footer = () => {
                 </div>
             </div>
             <div class="flex my-3">
-                <img class="px-1" src="../img/a.png" alt="">
-                <img class="px-1" src="../img/b.png" alt="">
-                <img class="px-1" src="../img/c.png" alt="">
-                <img class="px-1" src="../img/d.png" alt="">
+            <a href = "${contact.integram}"><img class="px-1" src="https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676869534/CV/ra6okdhpjlmwmoghhwrq.png" alt=""></a>
+            <a href = "${contact.facebook}"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
+    </div>
     </div>`
 };
 export default Footer;

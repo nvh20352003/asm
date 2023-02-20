@@ -3,8 +3,8 @@ import instance from "./config";
 const getAbuotMe = () => {
     return instance.get("/abuotMe");
 };
-const updateAbuotMe = (abuotMe) => {
-    return instance.put(`/abuotMe/`, abuotMe);
+const updateAbuotMe = () => {
+    return instance.put(`/abuotMe/`);
 };
 
 export { getAbuotMe, updateAbuotMe };

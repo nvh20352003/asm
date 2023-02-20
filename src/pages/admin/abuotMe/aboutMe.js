@@ -1,12 +1,12 @@
-import HeaderAdmin from "../../../components/HeaderAdmin"
-import { deleteProject, getProjects } from "../../../api/project";
+import { getAbuotMe } from "../../../api/abuotMe";
+import HeaderAdmin from "../../../components/HeaderAdmin";
 import { useEffect, useState } from "../../../lib";
 
-const AdminProjectsPage = () => {
-    const [data, setData] = useState([]);
+const AdminAboutPage = () => {
+    const [abuotMe, setAbuotMe] = useState([]);
 
     useEffect(() => {
-        getProjects().then((data) => setData(data));
+        getAbuotMe().then((abuotMe) => setAbuotMe(abuotMe));
     }, []);
 
     useEffect(function () {
@@ -25,46 +25,35 @@ const AdminProjectsPage = () => {
     return `
         ${HeaderAdmin()}
     <div class="container"> 
-                <h1>Quản lý dự án</h1>
-                <button class= "btn btn-danger mb-3"><a class="no-underline text-white" href="/admin/projects/add">Thêm mới</a></button>
+                <h1>Quản lý thông tin </h1>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Tên dự án</th>
-                            <th>Hình ảnh</th>
-                            <th>describe</th>
-                            <th>Technology</th>
-                            <th>Completiontime</th>
+                            <th>Họ và tên</th>
+                            <th>Ngày sinh</th>
+                            <th>Job</th>
+                            <th>Describe</th>
+                            <th>Ảnh</th>
+                            <th>Sở thích</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        ${data
-            .map((project, index) => {
-                return `
                                 <tr>
-                                    <td>${index + 1}</td>
-                                    <td>${project.name}</td>
-                                    <td class = "block"><img style="width:100px;display: grid; align-items: center;" class = "" src="${project.feartedImage}" alt=""></td>
-                                    <td>${project.describe}</td>
-                                    <td>${project.technology}</td>
-                                    <td>${project.completiontime}</td>
+                                    <td>${abuotMe.name}</td>
+                                    <td>${abuotMe.date}</td>
+                                    <td>${abuotMe.job}</td>
+                                    <td>${abuotMe.describe}</td>
+                                    <td class = "block"><img style="width:100px;display: grid; align-items: center;" class = "" src="${abuotMe.img}" alt=""></td>
+                                    <td>${abuotMe.interest}</td>
                                     <td width="150">
-                                        <button data-id="${project.id
-                    }" class="btn btn-danger btn-remove">
-                                            Xóa
-                                        </button>
-                                        <a href="/admin/projects/${project.id}/edit">Sửa</a>
+                                        <a href="/admin/aboutMe/${abuotMe.id}/edit">Sửa</a>
                                     </td>
                                 </tr>
-                            `;
-            })
-            .join("")}
                         
                     </tbody>
                 </table>
     </div>`;
 };
 
-export default AdminProjectsPage;
+export default AdminAboutPage;
