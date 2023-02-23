@@ -10,8 +10,6 @@ const resourceSchema = object({
   categories: string().required()
 })
 const add = () => {
-
-  let [error, setError] = useState({});
   useEffect(() => {
     const form = document.getElementById("form-add");
     const name = document.getElementById("name");
@@ -19,7 +17,6 @@ const add = () => {
     const description = document.getElementById("description");
     const price = document.getElementById("price");
     const cate = document.getElementById("cate");
-
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const urls = await uploadFiles(img.files);
@@ -39,8 +36,10 @@ const add = () => {
         error.inner.forEach((error) => {
           errorMessages[error.path] = error.message;
         });
-        console.log(error);
-        setError(errorMessages);
+        Object.keys(errorMessages).forEach(key => {
+          const errorElement = document.querySelector(`#${key}Error`);
+          errorElement.textContent = errorMessages[key];
+        });
       })
 
 
@@ -51,26 +50,27 @@ const add = () => {
     <div>
       <label for="">Tên sản phẩm</label>
       <input type="text" name="name" id="name" ">
-      ${error.name}
+      <div class="error" id="nameError"></div>
     </div>
     <div>
       <label for="">Ảnh</label>
       <input type="file" id="img" name="img">
+      <div id="imageError"></div>
     </div>
     <div>
       <label for="">Description</label> <br>
       <input type="text" name="name" id="description">
-      ${error.description}
+      <div id="descriptionError"></div>
     </div>
     <div>
       <label for="">Regularprice</label>
       <input type="text" name="price" id="price" >
-      ${error.regularprice}
+      <div class="error" id="regularpriceError"></div>
     </div>
     <div>
       <label for="">categories</label>
       <input type="text" name="categories"id="cate">
-      ${error.regularprice}
+      <div class="error" id="categoriesError"></div>
     </div>
     <div class="form-group">
       <button class="btn btn-primary">Thêm</button>
