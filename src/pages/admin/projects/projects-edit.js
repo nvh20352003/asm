@@ -44,7 +44,7 @@ const AdminEditProjectsPage = ({ id }) => {
                 urls1 = data.Album;
             };
 
-            if (projectImg.files > 0) {
+            if (projectImg.files.length > 0) {
                 urls = await uploadFiles(projectImg.files);
             } else {
                 urls = data.feartedImage;

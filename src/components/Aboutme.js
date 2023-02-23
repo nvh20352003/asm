@@ -27,7 +27,7 @@ const Aboutme = () => {
                     <div>
                         <h2 class="text-2xl text-white border-b-red-500  border-b-2 inline">About me</h2>
         
-                        <div class="py-4 text-lg text-white leading-5 break-words leading-loose">${aboutMe.conten} </div>
+                        <div class="py-4 text-lg text-white                                                                                                                                                                                                                                                                                                                                                                                                                                                                           break-words leading-loose">${aboutMe.conten} </div>
                         
                         <div class="text-green-500 text-lg">Here are my main skills:</div>
                     </div>

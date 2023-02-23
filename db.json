@@ -1,24 +1,7 @@
 {
   "projects": [
     {
-      "name": "ads",
-      "describe": "dfd",
-      "content": "fdf",
-      "linkGithub": "dfds",
-      "linkPreview": "sdf",
-      "completiontime": "dfs",
-      "feedback": "dfs",
-      "technology": "dfs",
-      "Album": [
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676544821/CV/kla598srqh0fd150cete.jpg",
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676544825/CV/w8gpkdpddigsnjtreolz.jpg",
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676544828/CV/zs6xwx1akq9lzq5vrorx.jpg",
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676544839/CV/jf4im2nm5jekvawu8pys.jpg"
-      ],
-      "categoryProjectId": "2",
-      "id": "G3UlJKw1"
-    },
-    {
+      "id": "XMx3jXL",
       "name": "add 1",
       "describe": "àgfg",
       "content": "fsdfds",
@@ -28,7 +11,7 @@
       "feedback": "ádsad",
       "technology": "dfgfdsgdf",
       "feartedImage": [
-        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676869533/CV/gi9l31gncyzkgg9zbzmg.png"
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1677056662/CV/i2nuohlgnspw4ziwoxrl.jpg"
       ],
       "Album": [
         "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676869533/CV/zqom4sxajm8kafmsl5g7.png",
@@ -36,10 +19,10 @@
         "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676869535/CV/t0tzgcbkjuqwd3szifeu.png",
         "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676869535/CV/x3yfpwui9sf2ykcjlolz.png"
       ],
-      "categoryProjectId": "3",
-      "id": "XMx3jXL"
+      "categoryProjectId": "1"
     },
     {
+      "id": "I8bvr5V",
       "name": "Dự án môn PHP",
       "describe": "Là một web site bán gấu",
       "content": "",
@@ -52,8 +35,7 @@
         "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1676873635/CV/ywsgllepkrm445hottub.jpg"
       ],
       "Album": [],
-      "categoryProjectId": "3",
-      "id": "I8bvr5V"
+      "categoryProjectId": "1"
     }
   ],
   "categoryProjects": [

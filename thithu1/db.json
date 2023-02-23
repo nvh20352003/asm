@@ -1,0 +1,54 @@
+{
+  "resources": [
+    {
+      "id": "1",
+      "name": "iphone 11",
+      "categories": "1",
+      "description": "Ihpne 11 là sản phẩn của Aper",
+      "image": [
+        "https://res.cloudinary.com/dv3vzmogk/image/upload/v1666142438/anhhtus/%C4%90%E1%BB%81%20thi/3_225_c6ncpa.jpg"
+      ],
+      "regularprice": "anhhtus"
+    },
+    {
+      "id": "2",
+      "name": "Sam sung",
+      "categories": "1",
+      "description": "Ihpne 11 là sản phẩn của Aper",
+      "image": [
+        "https://res.cloudinary.com/dv3vzmogk/image/upload/v1666142436/anhhtus/%C4%90%E1%BB%81%20thi/sm-s908_galaxys22ultra_front_burgundy_211119_1_mccaah.jpg"
+      ],
+      "regularprice": "anhhtus"
+    },
+    {
+      "id": "3",
+      "name": "Mac",
+      "description": "Ihpne 11 là sản phẩn của Aper",
+      "regularprice": "100000",
+      "categories": "1",
+      "image": [
+        "https://res.cloudinary.com/dv3vzmogk/image/upload/v1666142435/anhhtus/%C4%90%E1%BB%81%20thi/macbook_256_ousklt.png"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Mac m1 pro",
+      "description": "Ihpne 11 là sản phẩn của Aper",
+      "regularprice": "anhhtus",
+      "categories": "iphone",
+      "image": [
+        "https://res.cloudinary.com/dqqfnp0hk/image/upload/v1677156913/CV/liubrekqbngfydqz3cld.jpg"
+      ]
+    },
+    {
+      "name": "ádf",
+      "description": "adsfádf",
+      "regularprice": "sadfasd",
+      "categories": "ádfasđ",
+      "image": [
+        "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/d/v/dvfdgty_5_.jpg"
+      ],
+      "id": "qIg4YDy"
+    }
+  ]
+}
